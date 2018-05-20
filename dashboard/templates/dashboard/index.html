@@ -9,15 +9,62 @@
     .text-white {
         color: #fff;
     }
+
+    .activity-progress, .modal-progress {
+        margin-bottom: 18px;
+    }
 </style>
 {% endblock page_head %}
 
 {% block content %}
+<!-- Modal -->
+<div class="modal fade text-left" id="default" tabindex="-1" role="dialog" aria-labelledby="activity-modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h4 class="modal-title" id="myModalLabel1">Activity Guage</h4>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <h5>Criteria</h5>
+
+         <div class="modal-progress">
+            <p class="m-0">Functionality (/4) <span class="sucess float-right text-bold-600">3.00</span></p>
+            <div class="progress mt-1 mb-0" style="height: 7px;">
+                <div class="progress-bar bg-grey" role="progressbar" style="width: 90%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="4"></div>
+            </div>
+         </div><!-- /.modal-progress -->
+
+         <div class="modal-progress">
+            <p class="m-0">Inovation (/3)<span class="sucess float-right text-bold-600">2.00</span></p>
+            <div class="progress mt-1 mb-0" style="height: 7px;">
+                <div class="progress-bar bg-grey" role="progressbar" style="width: 74%" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+         </div><!-- /.modal-progress -->
+
+         <div class="modal-progress">
+            <p class="m-0">Presentation (/4)<span class="sucess float-right text-bold-600">3.00</span></p>
+            <div class="progress mt-1 mb-0" style="height: 7px;">
+                <div class="progress-bar bg-grey" role="progressbar" style="width: 90%" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+         </div><!-- /.modal-progress -->
+       </div>
+         
+       <div class="modal-footer">
+         <button type="button" class="btn grey btn-outline-secondary" data-dismiss="modal">Close</button>
+       </div>
+     </div>
+  </div>
+</div>
+
+
 <div class="row">
     <div class="col-md-4">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title"><i class="fa fa-calendar"></i> October</h4>
+        <div class="card border-info">
+            <div class="card-header card-head-inverse bg-info">
+                <h4 class="card-title text-white"><i class="fa fa-calendar"></i> October</h4>
             </div>
             <div class="card-content">
                 <div class="card-body">
@@ -40,15 +87,15 @@
     </div>
 
     <div class="col-md-4">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title"><i class="fa fa-calendar"></i> November</h4>
+        <div class="card border-info">
+            <div class="card-header card-head-inverse bg-info">
+                <h4 class="card-title text-white"><i class="fa fa-calendar"></i> November</h4>
             </div>
             <div class="card-content">
                 <div class="card-body">
                     <table class="table table-hover table-borderless table-card">
                         <tr>
-                            <td>05</td>
+                            <td>11</td>
                             <td class="bg-grey text-white">12345</td>
                             <td class="bg-danger text-white">Mid Sem Exam</td>
                         </tr>
@@ -65,9 +112,9 @@
     </div>
 
     <div class="col-md-4">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title"><i class="fa fa-calendar"></i> December</h4>
+        <div class="card border-info">
+            <div class="card-header card-head-inverse bg-info">
+                <h4 class="card-title text-white"><i class="fa fa-calendar"></i> December</h4>
             </div>
             <div class="card-content">
                 <div class="card-body">
@@ -88,5 +135,240 @@
             </div>
         </div>
     </div>
-</div>
+</div><!-- /.row -->
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header card-head-inverse bg-grey">
+                <h4 class="card-title text-white">12345 - Subject Name 1</h4>
+                <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                <div class="heading-elements">
+                    <ul class="list-inline mb-0">
+                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-content collapse show">
+                <div class="card-body">
+                   <div class="container">
+                       <div class="row">
+                           <div class="col-sm-6">
+                               <h4>Assessments</h4>
+
+                               <div class="activity-progress">
+                                   <div class="row">
+                                       <div class="col-sm-11">
+                                           <p class="m-0">Activity Gauge <span class="sucess float-right text-bold-600">14.00</span></p>
+                                           <div class="progress mt-1 mb-0" style="height: 7px;">
+                                               <div class="progress-bar bg-grey" role="progressbar" style="width: 14%" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100"></div>
+                                           </div>
+                                       </div>
+
+                                       <div class="col-sm-1">
+                                          <button type="button" class="btn btn-icon btn-outline-secondary" data-toggle="modal" data-target="#default"><i class="fa fa-expand"></i></button>
+                                       </div>
+                                   </div>
+                               </div>
+
+                               <div class="activity-progress">
+                                   <div class="row">
+                                       <div class="col-sm-11">
+                                           <p class="m-0">Group Project Stage 1 <span class="sucess float-right text-bold-600">8.00</span></p>
+                                           <div class="progress mt-1 mb-0" style="height: 7px;">
+                                               <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                           </div>
+                                       </div>
+
+                                       <div class="col-sm-1">
+                                          <button type="button" class="btn btn-icon btn-outline-secondary" data-toggle="modal" data-target="#default"><i class="fa fa-expand"></i></button>
+                                       </div>
+                                   </div>
+                               </div>
+
+                               <div class="activity-progress">
+                                   <div class="row">
+                                       <div class="col-sm-11">
+                                           <p class="m-0">Group Project Stage 2 <span class="sucess float-right text-bold-600"></span></p>
+                                           <div class="progress mt-1 mb-0" style="height: 7px;">
+                                               <div class="progress-bar bg-info" role="progressbar" style="width: 0%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                           </div>
+                                       </div>
+
+                                       <div class="col-sm-1">
+                                          <button type="button" class="btn btn-icon btn-outline-secondary" data-toggle="modal" data-target="#default"><i class="fa fa-expand"></i></button>
+                                       </div>
+                                   </div>
+                               </div><!-- /.activity-progress -->
+
+                               <div class="activity-progress">
+                                   <div class="row">
+                                       <div class="col-sm-11">
+                                           <p class="m-0">Threshold Exam <span class="sucess float-right text-bold-600"></span></p>
+                                           <div class="progress mt-1 mb-0" style="height: 7px;">
+                                               <div class="progress-bar bg-info" role="progressbar" style="width: 0%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                           </div>
+                                       </div>
+
+                                       <div class="col-sm-1">
+                                          <button type="button" class="btn btn-icon btn-outline-secondary"><i class="fa fa-expand"></i></button>
+                                       </div>
+                                   </div>
+                               </div><!-- /.activity-progress -->
+
+                               <div class="activity-progress">
+                                   <div class="row">
+                                       <div class="col-sm-11">
+                                           <p class="m-0">Final Exam <span class="sucess float-right text-bold-600"></span></p>
+                                           <div class="progress mt-1 mb-0" style="height: 7px;">
+                                               <div class="progress-bar bg-info" role="progressbar" style="width: 0%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                           </div>
+                                       </div>
+
+                                       <div class="col-sm-1">
+                                          <button type="button" class="btn btn-icon btn-outline-secondary" data-toggle="modal" data-target="#default"><i class="fa fa-expand"></i></button>
+                                       </div>
+                                   </div>
+                               </div><!-- /.activity-progress -->
+                           </div><!-- /.col-sm-6 -->
+
+                           <div class="col-sm-6">
+                               <div class="container">
+                                   <h4 class="text-center grey darken-1 text-bold-200">Current Subject Mark</h4>
+                                   <div>
+                                      <canvas id="bar-chart" height="300"></canvas>
+                                   </div>
+                               </div>
+                               <br>
+                               <p class="text-danger text-center"><i class="fa fa-info-circle"></i> You have 0 achievable marks remaining</p>
+                           </div>
+                       </div><!-- /.row -->
+                   </div><!-- /.container-fluid -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header card-head-inverse bg-success">
+                <h4 class="card-title text-white">22245 - Subject Name 2</h4>
+                <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                <div class="heading-elements">
+                    <ul class="list-inline mb-0">
+                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-content collapse show">
+                <div class="card-body">
+                   <div class="container">
+                       <div class="row">
+                           <div class="col-sm-6">
+                               <h4>Assessments</h4>
+
+                               <div class="activity-progress">
+                                   <div class="row">
+                                       <div class="col-sm-11">
+                                           <p class="m-0">Activity Gauge <span class="sucess float-right text-bold-600">14.00</span></p>
+                                           <div class="progress mt-1 mb-0" style="height: 7px;">
+                                               <div class="progress-bar bg-grey" role="progressbar" style="width: 14%" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100"></div>
+                                           </div>
+                                       </div>
+
+                                       <div class="col-sm-1">
+                                          <button type="button" class="btn btn-icon btn-outline-secondary" data-toggle="modal" data-target="#default"><i class="fa fa-expand"></i></button>
+                                       </div>
+                                   </div>
+                               </div>
+
+                               <div class="activity-progress">
+                                   <div class="row">
+                                       <div class="col-sm-11">
+                                           <p class="m-0">Assessment 1 <span class="sucess float-right text-bold-600">80.00</span></p>
+                                           <div class="progress mt-1 mb-0" style="height: 7px;">
+                                               <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                           </div>
+                                       </div>
+
+                                       <div class="col-sm-1">
+                                          <button type="button" class="btn btn-icon btn-outline-secondary" data-toggle="modal" data-target="#default"><i class="fa fa-expand"></i></button>
+                                       </div>
+                                   </div>
+                               </div><!-- /.activity-progress -->
+
+                               <div class="activity-progress">
+                                   <div class="row">
+                                       <div class="col-sm-11">
+                                           <p class="m-0">Assessment 2 <span class="sucess float-right text-bold-600">80.00</span></p>
+                                           <div class="progress mt-1 mb-0" style="height: 7px;">
+                                               <div class="progress-bar bg-purple" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                           </div>
+                                       </div>
+
+                                       <div class="col-sm-1">
+                                          <button type="button" class="btn btn-icon btn-outline-secondary" data-toggle="modal" data-target="#default"><i class="fa fa-expand"></i></button>
+                                       </div>
+                                   </div>
+                               </div><!-- /.activity-progress -->
+
+                               <div class="activity-progress">
+                                   <div class="row">
+                                       <div class="col-sm-11">
+                                           <p class="m-0">Assessment 3 <span class="sucess float-right text-bold-600">75.00</span></p>
+                                           <div class="progress mt-1 mb-0" style="height: 7px;">
+                                               <div class="progress-bar bg-pink" role="progressbar" style="width: 75%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                           </div>
+                                       </div>
+
+                                       <div class="col-sm-1">
+                                          <button type="button" class="btn btn-icon btn-outline-secondary" data-toggle="modal" data-target="#default"><i class="fa fa-expand"></i></button>
+                                       </div>
+                                   </div>
+                               </div><!-- /.activity-progress -->
+
+                               <div class="activity-progress">
+                                   <div class="row">
+                                       <div class="col-sm-11">
+                                           <p class="m-0">Final Exam <span class="sucess float-right text-bold-600">70</span></p>
+                                           <div class="progress mt-1 mb-0" style="height: 7px;">
+                                               <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                           </div>
+                                       </div>
+
+                                       <div class="col-sm-1">
+                                          <button type="button" class="btn btn-icon btn-outline-secondary" data-toggle="modal" data-target="#default"><i class="fa fa-expand"></i></button>
+                                       </div>
+                                   </div>
+                               </div><!-- /.activity-progress -->
+                           </div><!-- /.col-sm-6 -->
+
+                           <div class="col-sm-6">
+                               <div class="container">
+                                   <h4 class="text-center grey darken-1 text-bold-200">Current Subject Mark</h4>
+                                   <br>
+                                   <div class="text-center">
+                                      <input type="text" value="93" class="knob hide-value responsive angle-offset" data-angleOffset="0" data-thickness=".15" data-linecap="round" data-width="150" data-height="150" data-inputColor="#e1e1e1" data-readOnly="true" data-fgColor="#37BC9B" data-knob-icon="ft-trending-up">
+                                      <ul class="list-inline clearfix mt-2 mb-0">
+                                          <li class="border-right-grey border-right-lighten-2 pr-2">
+                                              <h2 class="grey darken-1 text-bold-400">93%</h2>
+                                              <span class="success">Student Mark</span>
+                                          </li>
+                                          <li class="pl-2">
+                                              <h2 class="grey darken-1 text-bold-400">65%</h2>
+                                              <span class="danger">Subject Avg</span>
+                                          </li>
+                                      </ul>
+                                   </div>
+                               </div>
+                               <br>
+                               <p class="text-danger text-center"><i class="fa fa-info-circle"></i> You have 0 achievable marks remaining</p>
+                           </div>
+                       </div><!-- /.row -->
+                   </div><!-- /.container-fluid -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- /.row -->
 {% endblock content %}
