@@ -85,7 +85,7 @@
     {% block menu_navbar %}
     <div class="header-navbar navbar-expand-sm navbar navbar-horizontal navbar-fixed navbar-light navbar-without-dd-arrow navbar-shadow" role="navigation" data-menu="menu-wrapper">
       <div class="navbar-container main-menu-content container center-layout" data-menu="menu-container">
-        <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
+        <ul class="nav navbar-nav mr-auto float-left" id="main-menu-navigation" data-menu="menu-navigation">
           <li class="active nav-item">
             <a class="nav-link" href="#">
               <i class="icon-home"></i><span data-i18n="nav.dash.main">Dashboard</span>
@@ -104,6 +104,10 @@
             </a>
           </li>
         </ul>
+
+        <div class="nav navbar-nav float-right">         
+          <span><i class="fa fa-calendar"></i> Today: {% now 'M d, Y' %}</span>
+        </div>
       </div>
     </div>
     {% endblock menu_navbar %}
@@ -118,7 +122,6 @@
         </div>
       </div>
     </div>
-    <!-- ////////////////////////////////////////////////////////////////////////////-->
 
     <footer class="footer footer-static footer-light navbar-shadow">
       <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2 container center-layout"><span class="float-md-left d-block d-md-inline-block">Copyright  &copy; 2018 <a class="text-bold-800 grey darken-2" href="#" target="_blank">LOREM IPSUM </a>, All rights reserved. </span><span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span></p>

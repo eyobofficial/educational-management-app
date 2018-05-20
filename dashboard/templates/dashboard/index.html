@@ -1,25 +1,87 @@
 {% extends 'base.html' %}
+{% block page_head %}
+<style>
+    .table-card td {
+        border-bottom: 4px solid #fff !important;
+        font-weight: bold;
+    }
+
+    .text-white {
+        color: #fff;
+    }
+</style>
+{% endblock page_head %}
 
 {% block content %}
 <div class="row">
     <div class="col-md-4">
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">October</h4>
+                <h4 class="card-title"><i class="fa fa-calendar"></i> October</h4>
             </div>
             <div class="card-content">
                 <div class="card-body">
-                    <table class="table">
+                    <table class="table table-hover table-borderless table-card">
                         <tr>
                             <td>05</td>
-                            <td class="bg-lime">12345</td>
-                            <td class="bg-danger">Mid Sem Exam</td>
+                            <td class="bg-grey text-white">12345</td>
+                            <td class="bg-danger text-white">Mid Sem Exam</td>
                         </tr>
 
                         <tr>
                             <td>10</td>
-                            <td class="bg-orange">22345</td>
-                            <td class="bg-danger">Assessment 1</td>
+                            <td class="bg-orange text-white">22345</td>
+                            <td class="bg-danger text-white">Assessment 1</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title"><i class="fa fa-calendar"></i> November</h4>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <table class="table table-hover table-borderless table-card">
+                        <tr>
+                            <td>05</td>
+                            <td class="bg-grey text-white">12345</td>
+                            <td class="bg-danger text-white">Mid Sem Exam</td>
+                        </tr>
+
+                        <tr>
+                            <td>10</td>
+                            <td class="bg-orange text-white">22345</td>
+                            <td class="bg-danger text-white">Assessment 1</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title"><i class="fa fa-calendar"></i> December</h4>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <table class="table table-hover table-borderless table-card">
+                        <tr>
+                            <td>05</td>
+                            <td class="bg-grey text-white">12345</td>
+                            <td class="bg-danger text-white">Mid Sem Exam</td>
+                        </tr>
+
+                        <tr>
+                            <td>10</td>
+                            <td class="bg-orange text-white">22345</td>
+                            <td class="bg-danger text-white">Assessment 1</td>
                         </tr>
                     </table>
                 </div>
