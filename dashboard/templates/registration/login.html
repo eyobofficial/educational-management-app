@@ -46,8 +46,32 @@
                 </div>
                 <div class="card-content">
                     <div class="card-body">
-                        <form class="form-horizontal form-simple" method="POST" novalidate>
+                        {% if next %}
+                            {% if user.is_authenticated %}
+                              <p class="text-danger">
+                                <i class="fa fa-exclamation-circle"></i> 
+                                Your account doesn't have access to this page. To proceed, please login with an account that has access.
+                              </p>
+                            {% else %}
+                              <p class="text-danger">
+                                <i class="fa fa-exclamation-circle"></i> 
+                                To access this page, please login first.
+                              </p>
+                            {% endif %}
+                        {% endif %}
+
+                        {% if form.errors %}
+                            <p class="text-danger">
+                              <i class="fa fa-exclamation-circle"></i> 
+                              You entered wrong username or password.
+                            </p>
+                        {% endif %}
+                        <form class="form-horizontal form-simple" method="POST">
                             {% csrf_token %}
+
+                            <!-- Hidden Fields -->
+                            <input type="hidden" name="next" value="{{ next }}">
+
                             <fieldset class="form-group position-relative has-icon-left mb-0">
                                 <input type="text" class="form-control form-control-lg input-lg" id="user-name" name="username" placeholder="Your Username" required>
                                 <div class="form-control-position">

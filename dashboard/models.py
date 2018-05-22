@@ -3,13 +3,13 @@ from django.contrib.auth.models import AbstractUser
 
 
 class CustomUser(AbstractUser):
-    USER_TYPE_OPTION = (
+    USER_ROLE_OPTION = (
         ('S', 'Student'),
         ('T', 'Teacher'),
     )
-    user_type = models.CharField(
+    role = models.CharField(
         max_length=1,
-        choices=USER_TYPE_OPTION,
+        choices=USER_ROLE_OPTION,
         default='S'
     )
     avatar = models.ImageField(
